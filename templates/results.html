@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Results of survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{session['firstName']}} {{session['lastName']}}</h1>
+        <div class="row">
+            <div class="half">
+                <p>You are smart enough to complete a registration form! Congratulations you are not dyslexic!</p>
+                <p>I guess you probably want a cookie?</p>
+                <img src="{{ url_for('static', filename='cookiemonster.gif') }}" alt="Cookie Monster">
+                <p>Too bad, grow up...the world only gets harder from here!!!</p>
+                <img src="{{ url_for('static', filename='oscargrouch.gif') }}" alt="Oscar the Grouch">
+            </div>
+        </div>
+       <div class="row">
+            <div class="half">
+                 <form action='/clear' method='POST'>
+                    <button>Go back</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
